@@ -3,6 +3,20 @@ const projectModal = document.getElementById("project-modal");
 const projectWindowTemplate = projectModal?.querySelector(".project-window-template");
 const mapScene = document.querySelector(".map-scene");
 let projectWindowZ = 300;
+const EXTERNAL_PROJECT_LINKS = {
+  "project-telegram": "https://t.me/kamillamukhametshina",
+  "project-cv": "https://drive.google.com/file/d/1BIQqj-1_1hxqpHU8X1pwsX6JppOlyj6-/view?usp=sharing",
+};
+
+function openExternalProject(projectId) {
+  const url = EXTERNAL_PROJECT_LINKS[projectId];
+  if (!url) {
+    return false;
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer");
+  return true;
+}
 
 function clearDesktopIconFocus() {
   document.querySelectorAll(".desktop-icon").forEach((icon) => {
@@ -173,7 +187,7 @@ const projectContent = {
       "Работала хелпером на съемках креатива. Пересобирала пресс, помогала с реквизитом.",
     hideMetrics: true,
     hideDetails: true,
-    thumb: "./assets/icon-vk-znakomstva.jpg",
+    thumb: "./assets/icon-vk-znakomstva.svg",
     preview: "./assets/vk-znakomstva/vk-1.gif",
     gallery: [
       { src: "./assets/vk-znakomstva/vk-1.gif", layout: "full" },
@@ -274,7 +288,7 @@ const projectContent = {
       "Работала с телевизионным агентством «Феникс Онлайн»: создавала визуальный контент для соцсетей и адаптировала материалы под быстрый медиаритм публикаций",
     hideMetrics: true,
     hideDetails: true,
-    thumb: "./assets/icon-project-phoenix.png",
+    thumb: "./assets/icon-project-phoenix.svg",
     preview: "./assets/phoenix/phoenix-1.png",
     gallery: [
       { src: "./assets/phoenix/phoenix-1.png", layout: "full" },
@@ -419,7 +433,7 @@ const projectContent = {
       "Собрали стратегию digital-присутствия для 2050.lab: от глубокой аналитики рынка до визуальной системы контента и креативных механик продвижения. Проект занял 2 место.",
     hideMetrics: true,
     hideDetails: true,
-    thumb: "./assets/icon-media-case-contest.jpg",
+    thumb: "./assets/icon-media-case-contest.svg",
     preview: "./assets/mcc-contest/mcc-1.gif",
     gallery: [
       { src: "./assets/mcc-contest/mcc-1.gif", layout: "full" },
@@ -478,22 +492,22 @@ const projectContent = {
     preview: "./assets/proizvolnye/1.png",
     gallery: [
       { src: "./assets/proizvolnye/1.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/2.mov", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/2.mov?v=20260422-2", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/3.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/4.mov", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/5.mov", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/4.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/5.mov?v=20260422-2", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/6.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/7.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/8.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/9.mov", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/10.mov", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/9.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/10.mov?v=20260422-2", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/11.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/13.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/14.mov", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/14.mov?v=20260422-2", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/15.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/16.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/17.mov", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/18.mov", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/17.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/18.mov?v=20260422-2", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/19.jpg", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/20.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/21.png", layout: "pair", cropFixed: true },
@@ -1577,10 +1591,9 @@ if (heroCluster) {
       }
 
       const projectId = icon.dataset.project;
-      if (projectId === "project-telegram") {
+      if (openExternalProject(projectId)) {
         icon.classList.remove("is-hovered");
         resetMagnet(icon);
-        window.open("https://t.me/kamillamukhametshina", "_blank", "noopener,noreferrer");
         return;
       }
 
@@ -1595,10 +1608,9 @@ if (heroCluster) {
 
       event.preventDefault();
       const projectId = icon.dataset.project;
-      if (projectId === "project-telegram") {
+      if (openExternalProject(projectId)) {
         icon.classList.remove("is-hovered");
         resetMagnet(icon);
-        window.open("https://t.me/kamillamukhametshina", "_blank", "noopener,noreferrer");
         return;
       }
 
@@ -1631,8 +1643,7 @@ if (mobileIcons.length) {
       }
 
       const projectId = icon.dataset.project;
-      if (projectId === "project-telegram") {
-        window.open("https://t.me/kamillamukhametshina", "_blank", "noopener,noreferrer");
+      if (openExternalProject(projectId)) {
         return;
       }
       if (projectId) {
@@ -1657,8 +1668,7 @@ if (mobileIcons.length) {
       }
 
       const projectId = icon.dataset.project;
-      if (projectId === "project-telegram") {
-        window.open("https://t.me/kamillamukhametshina", "_blank", "noopener,noreferrer");
+      if (openExternalProject(projectId)) {
         return;
       }
       if (projectId) {

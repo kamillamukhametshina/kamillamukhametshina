@@ -342,6 +342,47 @@ body {
   background: transparent;
 }
 
+/* Keep selected project/education icons visually identical to the main icon system */
+.picon-rassvet .desktop-icon-tile.tile-project,
+.picon-mediacase .desktop-icon-tile.tile-project,
+.eicon-tatiana .desktop-icon-tile.tile-project,
+.eicon-mikhail .desktop-icon-tile.tile-project,
+.eicon-liza .desktop-icon-tile.tile-project,
+.picon-phoenix .desktop-icon-tile.tile-project,
+.picon-sence .desktop-icon-tile.tile-project,
+.picon-okei .desktop-icon-tile.tile-project,
+.eicon-egor .desktop-icon-tile.tile-project,
+.eicon-mads .desktop-icon-tile.tile-project,
+.eicon-ohdschool .desktop-icon-tile.tile-project,
+.eicon-cherkasov .desktop-icon-tile.tile-project,
+.picon-cv .desktop-icon-tile.tile-project {
+  width: clamp(62px, 4.8vw, 74px);
+  height: clamp(44px, 3.6vw, 54px);
+  border-radius: var(--radius-tile);
+  box-shadow: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+.picon-rassvet .desktop-icon-image-project,
+.picon-mediacase .desktop-icon-image-project,
+.eicon-tatiana .desktop-icon-image-project,
+.eicon-mikhail .desktop-icon-image-project,
+.eicon-liza .desktop-icon-image-project,
+.picon-phoenix .desktop-icon-image-project,
+.picon-sence .desktop-icon-image-project,
+.picon-okei .desktop-icon-image-project,
+.eicon-egor .desktop-icon-image-project,
+.eicon-mads .desktop-icon-image-project,
+.eicon-ohdschool .desktop-icon-image-project,
+.eicon-cherkasov .desktop-icon-image-project,
+.picon-cv .desktop-icon-image-project {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
 /* Reklama/contest icon should use the same rounded tile format as other icons */
 .picon-reklama .desktop-icon-tile.tile-project {
   width: 60px;
@@ -839,10 +880,13 @@ body {
 .project-thumb {
   width: 44px;
   height: 44px;
-  border-radius: 0;
+  border-radius: var(--radius-tile) !important;
   background: transparent;
   padding: 0;
   object-fit: contain;
+  object-position: center;
+  overflow: hidden;
+  display: block;
   box-shadow: none;
 }
 
@@ -1429,6 +1473,8 @@ body {
 
   .mobile-kam-row img:nth-child(3) {
     animation-delay: 160ms;
+    width: 46%;
+    max-width: 180px;
   }
 
   .mobile-section {
@@ -1805,6 +1851,10 @@ body {
 
   .picon-eco .desktop-icon-title {
     margin-top: -5px;
+    white-space: nowrap;
+    max-width: none;
+    overflow: visible;
+    display: inline-block;
   }
 
   .eicon-bbe .desktop-icon-title {
@@ -1893,5 +1943,94 @@ body {
   .desktop-icon .desktop-icon-tile,
   .desktop-icon .desktop-icon-image {
     will-change: transform;
+  }
+
+  .picon-rassvet .desktop-icon-tile.tile-project,
+  .picon-mediacase .desktop-icon-tile.tile-project,
+  .eicon-tatiana .desktop-icon-tile.tile-project,
+  .eicon-mikhail .desktop-icon-tile.tile-project,
+  .eicon-liza .desktop-icon-tile.tile-project,
+  .picon-phoenix .desktop-icon-tile.tile-project,
+  .picon-sence .desktop-icon-tile.tile-project,
+  .picon-okei .desktop-icon-tile.tile-project,
+  .eicon-egor .desktop-icon-tile.tile-project,
+  .eicon-mads .desktop-icon-tile.tile-project,
+  .eicon-ohdschool .desktop-icon-tile.tile-project,
+  .eicon-cherkasov .desktop-icon-tile.tile-project,
+  .picon-cv .desktop-icon-tile.tile-project {
+    width: clamp(62px, 4.8vw, 74px);
+    height: clamp(44px, 3.6vw, 54px);
+    border-radius: var(--radius-tile);
+  }
+}
+
+@media (min-width: 761px) {
+  /* точечно: только съехавшие иконки, без кропа */
+  .picon-rassvet .desktop-icon-image-project,
+  .picon-mediacase .desktop-icon-image-project,
+  .eicon-tatiana .desktop-icon-image-project,
+  .eicon-mikhail .desktop-icon-image-project,
+  .eicon-cherkasov .desktop-icon-image-project,
+  .picon-phoenix .desktop-icon-image-project,
+  .picon-okei .desktop-icon-image-project,
+  .picon-cv .desktop-icon-image-project {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 1px;
+    box-sizing: border-box;
+  }
+}
+
+/* Desktop final lock: icon size/rounding/content fit (kept separate from mobile) */
+@media (min-width: 761px) {
+  .education-desktop .desktop-icon .desktop-icon-tile,
+  .projects-desktop .desktop-icon .desktop-icon-tile,
+  .education-desktop .desktop-icon .tile-project,
+  .projects-desktop .desktop-icon .tile-project {
+    width: 69.44px !important;
+    height: 57.13px !important;
+    border-radius: var(--radius-tile) !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .education-desktop .desktop-icon .desktop-icon-image-project,
+  .projects-desktop .desktop-icon .desktop-icon-image-project {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block;
+    border-radius: inherit;
+  }
+
+  /* leave these logos with a tiny inset so they match previous look */
+  .picon-sence .desktop-icon-image-project,
+  .picon-bitrix .desktop-icon-image-project,
+  .picon-citydrive .desktop-icon-image-project,
+  .eicon-bbe .desktop-icon-image-project,
+  .eicon-bitrix .desktop-icon-image-project {
+    padding: 2px !important;
+    box-sizing: border-box;
+  }
+
+  /* Fine-tune problematic icons */
+  .picon-phoenix .desktop-icon-image-project {
+    object-fit: cover !important;
+    object-position: 50% 42% !important;
+    transform: none !important;
+    border-radius: inherit;
+  }
+
+  .picon-rassvet .desktop-icon-image-project {
+    object-fit: cover !important;
+    object-position: 50% 44% !important;
+    transform: none !important;
+    border-radius: inherit;
   }
 }
