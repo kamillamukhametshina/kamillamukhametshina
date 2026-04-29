@@ -417,12 +417,28 @@ const projectContent = {
       { src: "./assets/reklama-contest/reklama-pair-2-left.png", layout: "pair" },
       { src: "./assets/reklama-contest/reklama-pair-2-right.png", layout: "pair" },
       { src: "./assets/reklama-contest/reklama-3.gif", layout: "full" },
-      { src: "./assets/reklama-contest/reklama-pair-4-left.mp4", layout: "pair" },
-      { src: "./assets/reklama-contest/reklama-pair-4-right.mp4", layout: "pair" },
-      { src: "./assets/reklama-contest/reklama-pair-5-left.mp4", layout: "pair" },
-      { src: "./assets/reklama-contest/reklama-pair-5-right.mp4", layout: "pair" },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/reklama-contest/reklama-pair-4-left.mp4",
+        layout: "pair",
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/reklama-contest/reklama-pair-4-right.mp4",
+        layout: "pair",
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/reklama-contest/reklama-pair-5-left.mp4",
+        layout: "pair",
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/reklama-contest/reklama-pair-5-right.mp4",
+        layout: "pair",
+      },
       { src: "./assets/reklama-contest/reklama-6.png", layout: "full" },
-      { src: "./assets/reklama-contest/reklama-7.mov?v=20260421-1", layout: "full", player: true },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/reklama-contest/reklama-7.mp4",
+        layout: "full",
+        player: true,
+      },
     ],
   },
   "project-mediacase": {
@@ -492,29 +508,45 @@ const projectContent = {
     preview: "./assets/proizvolnye/1.png",
     gallery: [
       { src: "./assets/proizvolnye/1.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/2.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/2.gif?v=20260429-1", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/3.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/4.mov?v=20260422-2", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/5.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/4.gif?v=20260429-1", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/5.gif?v=20260429-1", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/6.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/7.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/8.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/9.mov?v=20260422-2", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/10.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/9.gif?v=20260429-1", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/10.gif?v=20260429-1", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/11.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/13.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/14.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/14.gif?v=20260429-1", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/15.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/16.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/17.mov?v=20260422-2", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/18.mov?v=20260422-2", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/17.gif?v=20260429-1", layout: "pair", cropFixed: true },
+      { src: "./assets/proizvolnye/18.gif?v=20260429-1", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/19.jpg", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/20.png", layout: "pair", cropFixed: true },
       { src: "./assets/proizvolnye/21.png", layout: "pair", cropFixed: true },
-      { src: "./assets/proizvolnye/video-22.mov", layout: "pair", player: true },
-      { src: "./assets/proizvolnye/video-24.mp4", layout: "pair", player: true },
-      { src: "./assets/proizvolnye/video-23.mov", layout: "full", player: true },
-      { src: "./assets/proizvolnye/video-25.mov", layout: "full", player: true },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/proizvolnye/video-22.mov",
+        layout: "pair",
+        player: true,
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/proizvolnye/video-24.mp4",
+        layout: "pair",
+        player: true,
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/proizvolnye/video-23.mov",
+        layout: "full",
+        player: true,
+      },
+      {
+        src: "https://media.githubusercontent.com/media/kamillamukhametshina/cv/main/assets/proizvolnye/video-25.mov",
+        layout: "full",
+        player: true,
+      },
       {
         type: "text-card",
         text: "Айдентика образовательного проекта по переработке мусора для Финансового Университета при Правительстве РФ",
@@ -540,7 +572,9 @@ function preloadMediaAssets() {
       return;
     }
     if (/\.(mp4|webm|mov)(\?.*)?$/i.test(src)) {
-      videoQueue.add(src);
+      // Heavy videos should not preload globally: they make media-rich windows
+      // feel broken before the user even scrolls to them.
+      return;
     } else {
       imageQueue.add(src);
     }
@@ -580,21 +614,9 @@ function preloadMediaAssets() {
     img.src = src;
   };
 
-  const preloadVideo = (src) => {
-    const video = document.createElement("video");
-    video.preload = "metadata";
-    video.muted = true;
-    video.defaultMuted = true;
-    video.playsInline = true;
-    video.setAttribute("playsinline", "");
-    video.setAttribute("muted", "");
-    video.src = src;
-    video.load();
-  };
-
   const run = () => {
     imageQueue.forEach(preloadImage);
-    videoQueue.forEach(preloadVideo);
+    videoQueue.clear();
   };
 
   window.setTimeout(run, 220);
@@ -606,6 +628,22 @@ function preloadMediaAssets() {
 }
 
 preloadMediaAssets();
+
+function loadProjectVideo(video) {
+  if (!(video instanceof HTMLVideoElement)) {
+    return;
+  }
+  if (video.dataset.loaded === "1") {
+    return;
+  }
+  const src = video.dataset.src;
+  if (!src) {
+    return;
+  }
+  video.dataset.loaded = "1";
+  video.src = src;
+  video.load();
+}
 
 function setupAutoplayWhenVisible(windowElement) {
   const scrollRoot = windowElement.querySelector(".project-window-body");
@@ -624,7 +662,7 @@ function setupAutoplayWhenVisible(windowElement) {
     video.muted = true;
     video.defaultMuted = true;
     video.setAttribute("muted", "");
-    video.preload = "auto";
+    video.preload = "none";
     video.playsInline = true;
     video.setAttribute("playsinline", "");
     if (isPlayer) {
@@ -658,18 +696,33 @@ function setupAutoplayWhenVisible(windowElement) {
         }
 
         if (entry.isIntersecting) {
-          video.play().catch(() => {
-            // Ignore autoplay blocking or codec issues on specific devices.
-          });
+          video.dataset.wantsPlay = "1";
+          loadProjectVideo(video);
+          const playWhenReady = () => {
+            if (video.dataset.wantsPlay !== "1") {
+              return;
+            }
+            video.play().catch(() => {
+              // Ignore autoplay blocking or codec issues on specific devices.
+            });
+          };
+          if (video.readyState >= 2) {
+            playWhenReady();
+          } else {
+            video.addEventListener("loadeddata", playWhenReady, { once: true });
+          }
         } else if (!video.paused) {
+          video.dataset.wantsPlay = "0";
           video.pause();
+        } else {
+          video.dataset.wantsPlay = "0";
         }
       });
     },
     {
       root: scrollRoot,
-      threshold: 0.15,
-      rootMargin: "160px 0px",
+      threshold: 0.08,
+      rootMargin: "420px 0px",
     }
   );
 
@@ -689,6 +742,7 @@ function setupTapToToggleVideo(windowElement) {
       if (event.target !== video) {
         return;
       }
+      loadProjectVideo(video);
       if (video.paused) {
         video.play().catch(() => {});
       } else {
@@ -1349,9 +1403,9 @@ function openProjectModal(projectId, sourceIcon = null) {
         }
 
         if (shouldRenderVideo) {
-          media.src = src;
+          media.dataset.src = src;
           media.setAttribute("playsinline", "");
-          media.setAttribute("preload", item.player ? "metadata" : "auto");
+          media.setAttribute("preload", "none");
           if (item.player) {
             media.controls = true;
             media.classList.add("is-player");

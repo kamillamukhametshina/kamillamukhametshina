@@ -1393,6 +1393,12 @@ body {
   object-fit: contain;
 }
 
+.project-window.project-project-eco .project-gallery-video:not([src]) {
+  min-height: 240px;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #f3f3f3, #e7e7e7);
+}
+
 .project-window.project-project-eco .project-gallery-image.is-gif,
 .project-window.project-project-eco .project-gallery-image.is-featured,
 .project-window.project-project-eco .project-gallery-image.is-portrait,
