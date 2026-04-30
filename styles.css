@@ -1556,6 +1556,25 @@ body {
     display: block;
   }
 
+  .mobile-app-card .tile-r7,
+  .mobile-app-card .tile-region,
+  .mobile-app-card .tile-newmedia,
+  .mobile-app-card .tile-fresh {
+    width: 54px;
+    height: 44px;
+    flex-basis: 54px;
+    border-radius: 7px;
+  }
+
+  .mobile-app-card .tile-r7 .desktop-icon-image,
+  .mobile-app-card .tile-region .desktop-icon-image,
+  .mobile-app-card .tile-newmedia .desktop-icon-image,
+  .mobile-app-card .tile-fresh .desktop-icon-image {
+    width: 54px;
+    height: 44px;
+    object-fit: cover;
+  }
+
   .mobile-app-card .desktop-icon-title {
     margin: 0;
     padding: 0;
